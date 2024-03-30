@@ -3,7 +3,7 @@
 <% 
 	// 이전 페이지에서 전달 받은 메시지 확인
 	request.setCharacterEncoding("UTF-8");
-	String id = request.getParameter( "id" );
+	String studentID = request.getParameter( "studentID" );
 	String message = null;	
 
 	try
@@ -14,14 +14,14 @@
 		Statement stmt = con.createStatement();	
 
 		// MySQL 책 삭제 실행 	
-		String query = "delete from book where id = '" + id + "';";
+		String query = "delete from book where studentID = '" + studentID + "';";
 		if ( stmt.executeUpdate( query ) > 0 )
 		{
-			message = "ID(" + id + ")인 책을 삭제하였습니다."; 
+			message = "studentID(" + studentID + ")인 학생정보를 삭제하였습니다."; 
 		}
 		else 
 		{
-			message = "ID(" + id + ")인 책을 찾을 수 없습니다. 삭제시 책 제목이 아니고 책 ID를 입력해주세요."; 
+			message = "studentID(" + studentID + ")인 학생정보를 찾을 수 없습니다. 삭제시 학생 명이 아닌 학번을 입력해주세요."; 
 		}
 
 		// MySQL 드라이버 연결 해제
