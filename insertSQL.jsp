@@ -3,12 +3,13 @@
 <% 
 	// 이전 페이지에서 전달 받은 메시지 확인
 	request.setCharacterEncoding("UTF-8");
-	String id = request.getParameter( "id" );
- 	String title = request.getParameter( "title" );
-	String author = request.getParameter( "author" );
-	String publisher = request.getParameter( "publisher" );
-	String date = request.getParameter( "date" );
-	String image = request.getParameter( "image" );
+	String grade = request.getParameter( "grade" );
+ 	String studentID = request.getParameter( "studentID" );
+	String name = request.getParameter( "name" );
+	String birth = request.getParameter( "birth" );
+	String gender = request.getParameter( "gender" );
+	String studentrecord = request.getParameter( "studentrecord" );
+	String phonenumber = request.getParameter( "phonenumber" );
 	String message = null;
 
 	try
@@ -19,7 +20,7 @@
 		Statement stmt = con.createStatement();
 
 		// MySQL 책 추가 실행 	
-		String query = "insert into book( id, title, author, publisher, date, image ) values ( '" + id + "', '" + title + "', '" + author + "', '" + publisher + "', '" + date + "', '" + image + "');"; 
+		String query = "insert into book( grade, studentID, name, birth, gender, studentrecord, phonenumber ) values ( '" + grade + "', '" + studentID + "', '" + anameuthor + "', '" + birth + "', '" + gender + "', '" + studentrecord + "', '" + phonenumber + "');"; 
 		query = new String( query.getBytes("utf-8") );
 		if ( stmt.executeUpdate( query ) > 0 )
 		{
