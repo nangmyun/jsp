@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>School Event Management</title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+			}
+
+			input {
+			  margin-bottom: 10px;
+			  margin-top: 10px;
+			  font-size: 25px;
+			  outline: 0;
+			  background: lightyellow;
+			  color: #0E207F;
+			  border: 4px solid #0E207F;
+			  padding: 15px;
+			  border-radius: 9px;
+			}
+
+			input.img-button {
+		        background: url( "image/magnifying-glass.png" ) no-repeat;
+		        border: none;
+		        width: 32px;
+		        height: 32px;
+		        cursor: pointer;
+		        
+		        position: absolute;
+		        top: 15vh;
+		        right: 29vw;
+    		}
+
+			select {
+			  margin-bottom: 10px;
+			  margin-top: 10px;
+			  font-size: 25px;
+			  outline: 0;
+			  background: lightyellow;
+			  color: #0E207F;
+			  border: 4px solid #0E207F;
+			  padding: 14px;
+			  border-radius: 9px;
+			}
+
+			.header{
+				position: fixed;
+				width: 100vw;
+				height: 7vh;
+				top: 0px;
+				left: 0px;
+				background: #0E207F;
+			}
+
+			.logoL {
+				position: fixed;
+				top: 0.5vh;
+				left: 0.5vw;
+			}
+
+			.logoR {
+				position: fixed;
+				top: 1.5vh;
+				right: 5vw;
+				font-size: 25px;
+				color: white;
+			}
+
+			img {
+				width: 100%;
+				max-width: 100%;
+				height: 100%;
+				max-height: 100%;
+			}
+
+
+
+			.main_image {
+			   position: relative;
+			}
+			.main_image_text {
+			   position: absolute;
+			   top: 50%;
+			   left: 50%;
+			   transform: translate( -50%, -50% );
+			   font-weight: bold;
+			}
+
+			t1 {
+				font-size: 100px;
+				color: #F9A13A;
+			}
+
+			t2 {
+				font-size: 30px;
+				color: #91CE44;
+			}
+
+			.mid {
+				text-align: center;
+			}
+		</style>
+		<script>
+			function hello() {
+				alert('텍스트 버튼 인식되는지 테스트');
+			}
+
+			function hello1() {
+				alert('텍스트 버튼 인식되는지 테스트1');
+			}
+			function hello2() {
+				alert('텍스트 버튼 인식되는지 테스트2');
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div class="header">
+			<div class="logoL">
+				<font face="Impact" size="12" color="white">SEM</font>
+			</div>
+			<div class="logoR" onClick="hello()">
+				검색&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+				
+			<div class="logoR" onClick="hello1()">
+				추가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="logoR" onClick="hello2()">
+				삭제
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="mid">
+			<select name="EventList">
+			<option value="admission">--행사목록--</option>
+			<option value="admission">입학식</option>
+			<option value="OT">신입생OT</option>
+			<option value="party">개강파티</option>
+			<option value="MT">MT</option>
+			<option value="midterm">중간고사이벤트</option>
+			<option value="TD">스승의날</option>
+			<option value="CD">성년의날</option>
+			<option value="festival">축제</option>
+			</select>
+			<input type="text" name="search" placeholder="검색" size="40">
+			<input type="button" class="img-button">
+		</div>
+		
+	</body>
+</html>
